@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/teacher_panel"
+            android:icon="@drawable/ic_teacher"
+            android:title="Teacher Panel" />
+
+        <item
+            android:id="@+id/student_panel"
+            android:icon="@drawable/ic_student"
+            android:title="Student Panel" />
+
+        <item
+            android:id="@+id/admin_panel"
+            android:icon="@drawable/ic_admin"
+            android:title="Admin Panel" />
+
+
+    </group>
+
+
+    <item android:title="Profile">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/my_profile"
+                    android:icon="@drawable/ic_person"
+                    android:title="Profile" />
+
+                <item
+                    android:id="@+id/forgetPassword"
+                    android:icon="@drawable/ic_reset_password"
+                    android:title="Reset Password" />
+
+                <item
+                    android:id="@+id/logout"
+                    android:icon="@drawable/ic_logout"
+                    android:title="Logout" />
+
+            </group>
+
+        </menu>
+
+    </item>
+
+
+    <item android:title="Communication">
+
+        <menu>
+
+            <group android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/contact"
+                    android:icon="@drawable/ic_contact"
+                    android:title="Contact Us" />
+
+                <item
+                    android:id="@+id/feedback"
+                    android:icon="@drawable/ic_feedback"
+                    android:title="Feedback" />
+
+            </group>
+
+        </menu>
+
+    </item>
+
+</menu>

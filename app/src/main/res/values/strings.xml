@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Study Zone</string>
+    <string name="todo">todo</string>
+    <string name="log_in">Log in</string>
+    <string name="register">Register</string>
+    <string name="sign_in_to_continue">Sign in to continue</string>
+    <string name="forget_your_password">Forget your password?</string>
+    <string name="not_registered_yet_register_now">Not registered yet? Register now</string>
+    <string name="hello_there_welcome_back">Hello there, Welcome Back</string>
+    <string name="already_have_an_account_log_in">Already have an account? Log in</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="name">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
+    <string name="register_to_start_your_new_journey">Register to start your new Journey</string>
+    <string name="welcome">Welcome</string>
+    <string name="log_out">Log out</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+</resources>

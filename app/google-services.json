@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1032773280701",
+    "project_id": "study-zone-sabikrahat-72428",
+    "storage_bucket": "study-zone-sabikrahat-72428.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032773280701:android:0d69f6624290a8d0a7e8d4",
+        "android_client_info": {
+          "package_name": "com.sabikrahat.studyzone"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1032773280701-4u45lonl79ugqmua1ai3bi45dov8op06.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBZ3M4SBCM8udXPxMNucIk6zPbNddOyXw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1032773280701-4u45lonl79ugqmua1ai3bi45dov8op06.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
