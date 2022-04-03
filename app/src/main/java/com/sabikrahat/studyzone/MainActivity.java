@@ -121,6 +121,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.my_profile:
                 //TODO: My Profile
+                Intent intentShowProfile = new Intent(MainActivity.this, ViewProfile.class);
+                intentShowProfile.putExtra("targetUID", mAuth.getCurrentUser().getUid());
+                startActivity(intentShowProfile);
 
                 item.setCheckable(false);
                 break;

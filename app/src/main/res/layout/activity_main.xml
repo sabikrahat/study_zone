@@ -9,13 +9,13 @@
     tools:context=".MainActivity"
     tools:openDrawer="start">
 
-        <com.google.android.material.navigation.NavigationView
-            android:id="@+id/application_nav_view_ID"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            app:headerLayout="@layout/drawer_header_design"
-            app:menu="@menu/home_drawer" />
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/application_nav_view_ID"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/drawer_header_design"
+        app:menu="@menu/home_drawer" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -48,12 +48,12 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="500dp"
-                android:textSize="25sp"
-                android:gravity="center"
-                android:textColor="@color/black"
                 android:layout_below="@id/divider"
                 android:layout_alignParentBottom="true"
-                android:text="Welcome to Study Zone" />
+                android:gravity="center"
+                android:text="Welcome to Study Zone"
+                android:textColor="@color/black"
+                android:textSize="25sp" />
 
         </RelativeLayout>
 
