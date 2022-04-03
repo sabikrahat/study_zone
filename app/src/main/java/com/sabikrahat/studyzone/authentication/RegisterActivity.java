@@ -10,7 +10,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
 import com.google.firebase.auth.FirebaseAuthUserCollisionException;
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.UserProfileChangeRequest;
 import com.google.firebase.database.FirebaseDatabase;
@@ -183,8 +185,16 @@ public class RegisterActivity extends AppCompatActivity {
             } else {
                 // If sign in fails, display a message to the user.
                 if (task.getException() instanceof FirebaseAuthUserCollisionException) {
+                    //If email already registered.
                     progressDialog.dismiss();
-                    Toast.makeText(RegisterActivity.this, "User is already Registered.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(RegisterActivity.this, "Email already registered.", Toast.LENGTH_LONG).show();
+                } else if (task.getException() instanceof FirebaseAuthInvalidCredentialsException) {
+                    //If email are in incorrect format
+                    progressDialog.dismiss();
+                    Toast.makeText(RegisterActivity.this, "Email format incorrect.", Toast.LENGTH_LONG).show();
+                } else if (task.getException() instanceof FirebaseAuthWeakPasswordException) {
+                    progressDialog.dismiss();
+                    Toast.makeText(RegisterActivity.this, "Password is too weak.", Toast.LENGTH_LONG).show();
                 } else {
                     progressDialog.dismiss();
                     Toast.makeText(RegisterActivity.this, "Error: " + task.getException().getMessage(), Toast.LENGTH_LONG).show();
