@@ -1,10 +1,15 @@
 package com.sabikrahat.studyzone;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -35,6 +40,7 @@ public class EditProfile extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private String RID = "";
 
+    @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,19 +52,11 @@ public class EditProfile extends AppCompatActivity {
         toolbar.setNavigationOnClickListener(view -> finish());
 
         profilePic = findViewById(R.id.image_profile);
-        editPic = findViewById(R.id.tv_change);
         name = findViewById(R.id.fullname);
         phone = findViewById(R.id.phone_number);
         save = findViewById(R.id.save_changes);
 
         mAuth = FirebaseAuth.getInstance();
-
-        editPic.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(EditProfile.this, "will updated soon.", Toast.LENGTH_SHORT).show();
-            }
-        });
 
         DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users").child(mAuth.getCurrentUser().getUid());
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -81,16 +79,19 @@ public class EditProfile extends AppCompatActivity {
             }
         });
 
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DatabaseReference databaseReference = FirebaseDatabase.getInstance().getReference("Users").child(mAuth.getCurrentUser().getUid());
+        findViewById(R.id.tv_change).setOnClickListener(view -> imagePickAndProcess());
 
-                HashMap<String, Object> hashMap = new HashMap<>();
-                hashMap.put("name", name.getText().toString());
-                hashMap.put("phone", phone.getText().toString());
+        save.setOnClickListener(v -> saveData());
+    }
+    
+    public void saveData() {
+        DatabaseReference databaseReference1 = FirebaseDatabase.getInstance().getReference("Users").child(mAuth.getCurrentUser().getUid());
 
-                databaseReference.updateChildren(hashMap);
+        HashMap<String, Object> hashMap = new HashMap<>();
+        hashMap.put("name", name.getText().toString());
+        hashMap.put("phone", phone.getText().toString());
+
+        databaseReference1.updateChildren(hashMap);
 
 //                DatabaseReference databaseRef = FirebaseDatabase.getInstance().getReference("Rid").child(RID);
 //
@@ -99,12 +100,56 @@ public class EditProfile extends AppCompatActivity {
 //                hashMap_R.put("phoneNumber", phone.getText().toString());
 //
 //                databaseRef.updateChildren(hashMap_R);
-                Toast.makeText(EditProfile.this, "Data updated successfully.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(EditProfile.this, "Data updated successfully.", Toast.LENGTH_SHORT).show();
 
-                finish();
-                Intent intent = new Intent(EditProfile.this, MainActivity.class);
-                startActivity(intent);
+        finish();
+        startActivity(new Intent(EditProfile.this, MainActivity.class));
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    public void imagePickAndProcess() {
+        boolean pick = true;
+        if (pick) {
+            if (!checkCameraPermission()) {
+                System.out.println("Camera permission not granted");
+                requestCameraPermission();
+            } else {
+                pickImage();
             }
-        });
+        } else {
+            if (!checkStoragePermission()) {
+                requestStoragePermission();
+            } else {
+                pickImage();
+            }
+        }
+    }
+
+    private boolean checkCameraPermission() {
+        boolean cameraPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED;
+        boolean writeStoragePermission = ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+        System.out.println("Camera permission: " + cameraPermission);
+        return cameraPermission && writeStoragePermission;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    private void requestCameraPermission() {
+        System.out.println("Requesting camera permission");
+        requestPermissions(new String[]{Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+    }
+
+    private boolean checkStoragePermission() {
+        System.out.println("Checking storage permission");
+        return ContextCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED;
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    private void requestStoragePermission() {
+        System.out.println("Requesting storage permission");
+        requestPermissions(new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, 100);
+    }
+
+    private void pickImage() {
+        Toast.makeText(this, "will updated soon.", Toast.LENGTH_SHORT).show();
     }
 }
