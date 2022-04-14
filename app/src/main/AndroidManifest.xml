@@ -15,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudyZone">
         <activity
+            android:name=".authentication.ForgetPasswordActivity"
+            android:exported="false" />
+        <activity
             android:name=".EditProfile"
             android:exported="false" />
         <activity

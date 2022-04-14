@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Study Zone</string>
-    <string name="todo">todo</string>
+    <string name="Admin">admin</string>«
+    <string name="Teacher">teacher</string>«
+    <string name="Student">student</string>«
+    <string name="Guest">guest</string>«
+    <string name="todo">todo</string>«
     <string name="log_in">Log in</string>
     <string name="register">Register</string>
     <string name="sign_in_to_continue">Sign in to continue</string>
@@ -18,4 +22,10 @@
     <string name="log_out">Log out</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="send_email">Send Email</string>
+    <string name="change_password_text">This is a security sensitive operation for that reason you are logged in then you are automatically signed out. A password reset email will sent to your mail if you fill the email session below and press the button.\n\nWant to sign in again?</string>
+    <string name="post_hint">Start typing here to share something....</string>
+    <string name="post">Post</string>
+    <string name="notice_board">Notice Board</string>
+    <string name="done">Done</string>
 </resources>

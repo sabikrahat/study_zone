@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -45,6 +46,7 @@ public class LoginActivity extends AppCompatActivity {
         findViewById(R.id.loginActivityLoginButtonID).setOnClickListener(view -> {
             loginUser();
         });
+        findViewById(R.id.loginActivityResetPasswordID).setOnClickListener(view -> startActivity(new Intent(LoginActivity.this, ForgetPasswordActivity.class)));
     }
 
     private void loginUser() {
@@ -83,6 +85,8 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot snapshot) {
                         if ((snapshot.child("status").getValue()).equals("true")) {
+                            emailEditText.setText("");
+                            passwordEditText.setText("");
                             progressDialog.dismiss();
                             startActivity(new Intent(LoginActivity.this, MainActivity.class).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK));
                         } else {

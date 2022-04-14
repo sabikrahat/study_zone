@@ -7,7 +7,6 @@ public class User {
     private String name;
     private String phone;
     private String imageURL;
-    private String batch;
     private String role;
     private String status;
     private String createAt;
@@ -15,14 +14,13 @@ public class User {
     public User() {
     }
 
-    public User(String uid, String rid, String email, String name, String phone, String imageURL, String batch, String role, String status, String createAt) {
+    public User(String uid, String rid, String email, String name, String phone, String imageURL, String role, String status, String createAt) {
         this.uid = uid;
         this.rid = rid;
         this.email = email;
         this.name = name;
         this.phone = phone;
         this.imageURL = imageURL;
-        this.batch = batch;
         this.role = role;
         this.status = status;
         this.createAt = createAt;
@@ -74,14 +72,6 @@ public class User {
 
     public void setImageURL(String imageURL) {
         this.imageURL = imageURL;
-    }
-
-    public String getBatch() {
-        return batch;
-    }
-
-    public void setBatch(String batch) {
-        this.batch = batch;
     }
 
     public String getRole() {

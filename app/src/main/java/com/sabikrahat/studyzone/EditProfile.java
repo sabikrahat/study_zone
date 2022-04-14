@@ -150,6 +150,6 @@ public class EditProfile extends AppCompatActivity {
     }
 
     private void pickImage() {
-        Toast.makeText(this, "will updated soon.", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Will updated later.", Toast.LENGTH_SHORT).show();
     }
 }

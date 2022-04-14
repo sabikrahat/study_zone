@@ -6,6 +6,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -34,7 +37,7 @@ import java.util.List;
 public class ViewProfile extends AppCompatActivity {
 
     private ImageView profilePic;
-    private TextView name, email, phone, id, batch, available;
+    private TextView name, email, phone, id, available;
     private RecyclerView recyclerView;
 
     private String targetUID;
@@ -43,6 +46,7 @@ public class ViewProfile extends AppCompatActivity {
 
     private ViewProfilePostAdapter viewProfilePostAdapter;
     private List<Post> postLists;
+    private User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -65,7 +69,6 @@ public class ViewProfile extends AppCompatActivity {
         email = findViewById(R.id.userProfileEmailID);
         phone = findViewById(R.id.userProfilePhoneID);
         id = findViewById(R.id.userProfileStudentIdID);
-        batch = findViewById(R.id.userProfileBatchID);
         available = findViewById(R.id.availableTextID);
         recyclerView = findViewById(R.id.userProfileRecyclerViewID);
 
@@ -73,7 +76,7 @@ public class ViewProfile extends AppCompatActivity {
         databaseReference.child(targetUID).addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                User user = snapshot.getValue(User.class);
+                user = snapshot.getValue(User.class);
 
                 try {
                     Glide.with(ViewProfile.this).load(user.getImageURL()).into(profilePic);
@@ -84,7 +87,6 @@ public class ViewProfile extends AppCompatActivity {
                 email.setText(user.getEmail());
                 phone.setText(user.getPhone());
                 id.setText(user.getRid() + " (App id)");
-                batch.setText(user.getBatch());
                 if ((user.getStatus()).equals("true")) {
                     available.setText("Active");
                     available.setVisibility(View.GONE);
@@ -98,6 +100,13 @@ public class ViewProfile extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
                 Toast.makeText(ViewProfile.this, "Error: " + error.getMessage(), Toast.LENGTH_SHORT).show();
             }
+        });
+
+        id.setOnClickListener(view -> {
+            ClipboardManager clipboard = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clip = ClipData.newPlainText("id", user.getRid());
+            clipboard.setPrimaryClip(clip);
+            Toast.makeText(ViewProfile.this, "Student id copied.", Toast.LENGTH_SHORT).show();
         });
 
         phone.setOnClickListener(v -> {

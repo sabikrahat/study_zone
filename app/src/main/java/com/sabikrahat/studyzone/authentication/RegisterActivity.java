@@ -157,7 +157,7 @@ public class RegisterActivity extends AppCompatActivity {
                 SimpleDateFormat sdf = new SimpleDateFormat("E, dd MMM yyyy 'at' hh:mm a");
                 String currentDateAndTime = sdf.format(new Date());
 
-                User user = new User(mAuth.getCurrentUser().getUid(), rid, email, name, phone, imageUrl, "guest", "guest", "true", currentDateAndTime);
+                User user = new User(mAuth.getCurrentUser().getUid(), rid, email, name, phone, imageUrl, "Guest", "true", currentDateAndTime);
 
                 FirebaseDatabase.getInstance().getReference("Users").child(mAuth.getCurrentUser().getUid()).setValue(user).addOnCompleteListener(task12 -> {
                     FirebaseUser mUser = mAuth.getCurrentUser();
