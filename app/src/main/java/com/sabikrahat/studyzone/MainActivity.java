@@ -35,9 +35,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.sabikrahat.studyzone.adapter.PostAdapter;
+import com.sabikrahat.studyzone.admin_panel.AdminPanelActivity;
 import com.sabikrahat.studyzone.authentication.ForgetPasswordActivity;
 import com.sabikrahat.studyzone.models.Post;
 import com.sabikrahat.studyzone.models.User;
+import com.sabikrahat.studyzone.student_panel.StudentPanelActivity;
+import com.sabikrahat.studyzone.teacher_panel.TeacherPanelActivity;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -214,18 +217,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             case R.id.student_panel:
                 //TODO: Student Panel
                 Toast.makeText(this, "Student Panel", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, StudentPanelActivity.class));
                 item.setCheckable(false);
                 break;
 
             case R.id.teacher_panel:
                 //TODO: Teacher Panel
                 Toast.makeText(this, "Teacher Panel", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, TeacherPanelActivity.class));
                 item.setCheckable(false);
                 break;
 
             case R.id.admin_panel:
                 //TODO: Admin Panel
                 Toast.makeText(this, "Admin Panel", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(MainActivity.this, AdminPanelActivity.class));
                 item.setCheckable(false);
                 break;
 

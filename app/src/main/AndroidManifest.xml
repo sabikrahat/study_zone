@@ -15,6 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudyZone">
         <activity
+            android:name=".teacher_panel.TeacherPanelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".student_panel.StudentPanelActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin_panel.AdminPanelActivity"
+            android:exported="false" />
+        <activity
             android:name=".authentication.ForgetPasswordActivity"
             android:exported="false" />
         <activity
