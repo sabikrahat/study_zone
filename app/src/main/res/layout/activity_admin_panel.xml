@@ -1,33 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/admin_bg"
     tools:context=".admin_panel.AdminPanelActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#00008577"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme"
-        app:navigationIcon="@drawable/ic_back"
-        app:title="Admin Panel"
-        app:titleTextColor="@color/comb_1" />
+        android:layout_height="wrap_content">
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@color/comb_1" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00008577"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="Admin Panel"
+            app:titleTextColor="@color/comb_1" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Admin Panel"/>
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/toolbar"
+            android:background="@color/comb_1" />
 
-</LinearLayout>
+        <Button
+            android:id="@+id/adminPanelAddAdminID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:layout_margin="10dp"
+            android:text="Add Admin"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelRemoveAdminID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelAddAdminID"
+            android:layout_margin="10dp"
+            android:text="Make a User Guest"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelAddTeacherID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelRemoveAdminID"
+            android:layout_margin="10dp"
+            android:text="Add Teacher"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelAddStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelAddTeacherID"
+            android:layout_margin="10dp"
+            android:text="Add Student"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelDisableUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelAddStudent"
+            android:layout_margin="10dp"
+            android:text="Disable a User"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelEnableUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelDisableUser"
+            android:layout_margin="10dp"
+            android:text="Enable a User"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/adminPanelSearchAllUsers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelEnableUser"
+            android:layout_margin="10dp"
+            android:text="See all Users"
+            android:textAllCaps="false" />
+
+
+    </RelativeLayout>
+
+
+
+
+</ScrollView>
