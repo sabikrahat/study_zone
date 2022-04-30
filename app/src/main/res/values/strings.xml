@@ -28,4 +28,5 @@
     <string name="post">Post</string>
     <string name="notice_board">Notice Board</string>
     <string name="done">Done</string>
+    <string name="rotate_to_view_in_full_screen">Rotate your mobile to adjust screen size or better performance.</string>
 </resources>

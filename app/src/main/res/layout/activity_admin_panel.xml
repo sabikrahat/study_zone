@@ -35,16 +35,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/divider"
-            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:text="Add Admin"
             android:textAllCaps="false" />
 
         <Button
-            android:id="@+id/adminPanelRemoveAdminID"
+            android:id="@+id/adminPanelMakeGuestID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/adminPanelAddAdminID"
-            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:text="Make a User Guest"
             android:textAllCaps="false" />
 
@@ -52,7 +58,7 @@
             android:id="@+id/adminPanelAddTeacherID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/adminPanelRemoveAdminID"
+            android:layout_below="@id/adminPanelMakeGuestID"
             android:layout_margin="10dp"
             android:text="Add Teacher"
             android:textAllCaps="false" />
@@ -62,41 +68,38 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/adminPanelAddTeacherID"
-            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:text="Add Student"
-            android:textAllCaps="false" />
-
-        <Button
-            android:id="@+id/adminPanelDisableUser"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/adminPanelAddStudent"
-            android:layout_margin="10dp"
-            android:text="Disable a User"
-            android:textAllCaps="false" />
-
-        <Button
-            android:id="@+id/adminPanelEnableUser"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/adminPanelDisableUser"
-            android:layout_margin="10dp"
-            android:text="Enable a User"
             android:textAllCaps="false" />
 
         <Button
             android:id="@+id/adminPanelSearchAllUsers"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/adminPanelEnableUser"
-            android:layout_margin="10dp"
+            android:layout_below="@id/adminPanelAddStudent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:text="See all Users"
             android:textAllCaps="false" />
 
 
+        <Button
+            android:id="@+id/adminPanelChangeClassLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/adminPanelSearchAllUsers"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="Change Class Join Link"
+            android:textAllCaps="false" />
+
     </RelativeLayout>
-
-
-
 
 </ScrollView>

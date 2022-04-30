@@ -35,17 +35,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/divider"
-            android:layout_margin="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
             android:text="Take Class now"
             android:textAllCaps="false" />
 
         <Button
-            android:id="@+id/teacherPanelUploadRecoredVideos"
+            android:id="@+id/teacherPanelUploadLinkVideos"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/teacherPanelTakeClassNow"
             android:layout_margin="10dp"
-            android:text="Upload recorded videos"
+            android:text="Upload Youtube Links"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/teacherPanelSeeAllVideos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/teacherPanelUploadLinkVideos"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:text="See List and Delete Videos"
             android:textAllCaps="false" />
 
     </RelativeLayout>

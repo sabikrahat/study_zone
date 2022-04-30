@@ -216,21 +216,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
             case R.id.student_panel:
                 //TODO: Student Panel
-                Toast.makeText(this, "Student Panel", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "Student Panel", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, StudentPanelActivity.class));
                 item.setCheckable(false);
                 break;
 
             case R.id.teacher_panel:
                 //TODO: Teacher Panel
-                Toast.makeText(this, "Teacher Panel", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "Teacher Panel", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, TeacherPanelActivity.class));
                 item.setCheckable(false);
                 break;
 
             case R.id.admin_panel:
                 //TODO: Admin Panel
-                Toast.makeText(this, "Admin Panel", Toast.LENGTH_SHORT).show();
+//                Toast.makeText(this, "Admin Panel", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(MainActivity.this, AdminPanelActivity.class));
                 item.setCheckable(false);
                 break;

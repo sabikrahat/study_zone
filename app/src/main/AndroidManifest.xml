@@ -15,6 +15,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StudyZone">
         <activity
+            android:name=".teacher_panel.VideoListShowWithDeleteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".student_panel.VideoListShowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".student_panel.YoutubeVideoShowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".admin_panel.SeeAllUsersActivity"
+            android:exported="false" />
+        <activity
             android:name=".teacher_panel.TeacherPanelActivity"
             android:exported="false" />
         <activity

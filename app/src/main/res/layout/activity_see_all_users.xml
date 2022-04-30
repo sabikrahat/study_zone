@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".admin_panel.SeeAllUsersActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00008577"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:navigationIcon="@drawable/ic_back"
+            app:title="Admin Panel"
+            app:titleTextColor="@color/comb_1" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/toolbar"
+            android:background="@color/comb_1" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/searchId"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divider"
+            android:layout_marginBottom="4dp"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            app:endIconMode="clear_text"
+            app:startIconDrawable="@drawable/ic_id">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/adminPanelSearchUsersEditText"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Search users by id..."
+                android:inputType="number"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/adminPanelSearchUsersRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchId"
+            android:padding="5dp"
+            tools:ignore="NotSibling" />
+
+    </RelativeLayout>
+
+</ScrollView>

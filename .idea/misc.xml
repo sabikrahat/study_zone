@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/drawable/button_bg.xml" value="0.157" />
         <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/activity_admin_panel.xml" value="0.176" />
         <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/activity_edit_post.xml" value="0.2484375" />
         <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/activity_edit_profile.xml" value="0.2484375" />
@@ -10,12 +11,20 @@
         <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/activity_login.xml" value="0.325" />
         <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/activity_register.xml" value="0.328125" />
+        <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/activity_see_all_users.xml" value="0.33125" />
         <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/activity_student_panel.xml" value="0.264" />
-        <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/activity_teacher_panel.xml" value="0.1" />
+        <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/activity_teacher_panel.xml" value="0.2" />
+        <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/activity_video_list_show.xml" value="0.19791666666666666" />
+        <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/activity_video_list_show_with_delete.xml" value="0.16302083333333334" />
         <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/activity_view_profile.xml" value="0.264" />
         <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/activity_welcome.xml" value="0.328125" />
+        <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/activity_youtube_video_show.xml" value="0.1921875" />
+        <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/admin_custom_popup_layout.xml" value="0.33125" />
         <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/drawer_header_design.xml" value="0.264" />
         <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/post_item.xml" value="0.264" />
+        <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/teacher_video_upload_popup.xml" value="0.1921875" />
+        <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/user_show_list_item.xml" value="0.264" />
+        <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/layout/video_list_item.xml" value="0.19791666666666666" />
         <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/menu/home_drawer.xml" value="0.328125" />
         <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/menu/post_menu.xml" value="0.328125" />
         <entry key="..\:/AAA-Files/EWU/CSE489/Project-Files/StudyZone/app/src/main/res/menu/user_profile_menu.xml" value="0.328125" />
